@@ -1,0 +1,22 @@
+.custom-menu li a{
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    padding: 8px 24px;
+    margin-left: 4px;
+    opacity: 0.8;
+}
+
+.custom-menu li a:hover{
+    border-color: #23BE0A;
+    color: #23BE0A;
+}
+
+.custom-menu li a.active{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #23BE0A;
+    color: #23BE0A;
+}
