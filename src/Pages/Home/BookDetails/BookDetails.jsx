@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addItemsToLS } from '../../../Utility/addToDB';
 
 const BookDetails = () => {
     const id = useParams();
@@ -20,9 +21,13 @@ const BookDetails = () => {
     yearOfPublishing,
   } = Book;
 
-  const handdelMarkAsRead = () => {
+  const handdelMarkAsRead = (id) => {
     // where to store 
-    // 
+    // store with id
+    // store like a array or collection 
+    // if book already exist then show a alert
+    // if book not exist then push in the collection or array
+    addItemsToLS(id);
   }
 
     return (
@@ -71,7 +76,10 @@ const BookDetails = () => {
             </div>
           </div>
           <div>
-            <button className="mr-3 btn bg-white text-black py-[18px] px-[28px]">
+            <button
+              onClick={() => handdelMarkAsRead(bookId)}
+              className="mr-3 btn bg-white text-black py-[18px] px-[28px]"
+            >
               Mark as Read
             </button>
             <button className="mr-3 btn bg-[#23BE0A] text-white py-[18px] px-[28px]">
