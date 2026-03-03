@@ -16,11 +16,12 @@ const addItemsToLS = (id) => {
 
     if(alreadyExistBooks.includes(id)){
         alert('list was already Marked for reading');
-        return;
+        return ;
     }else{
         alreadyExistBooks.push(id);
         const data = JSON.stringify(alreadyExistBooks);
         localStorage.setItem('readList', data);
+        return ;
     }
 }
 

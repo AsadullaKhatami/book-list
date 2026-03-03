@@ -18,7 +18,7 @@ const Chart = ({readBooksData}) => {
       >
         <Bar dataKey="totalPages" fill="#8884d8" />
         <XAxis
-          dataKey="bookName"
+          dataKey={"bookName"}
         />
         <YAxis />
       </BarChart>

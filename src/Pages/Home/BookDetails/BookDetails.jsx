@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addItemsToLS } from '../../../Utility/addToDB';
+import Alert from '../../../Components/Alert/Alert';
 
 const BookDetails = () => {
     const id = useParams();
