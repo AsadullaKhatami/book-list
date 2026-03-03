@@ -5,11 +5,13 @@ import Footer from '../Footer/Footer';
 
 const Roots = () => {
     return (
-        <div>
-            <NabBar></NabBar>
-            <Outlet></Outlet>
-            <Footer></Footer>
+      <div>
+        <NabBar></NabBar>
+        <div className='my-10'>
+          <Outlet></Outlet>
         </div>
+        <Footer></Footer>
+      </div>
     );
 };
 

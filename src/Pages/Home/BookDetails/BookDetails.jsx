@@ -7,7 +7,6 @@ const BookDetails = () => {
     const bookId = parseInt(id.bookId);
     const data = useLoaderData();
     const Book = data.find(book => book.bookId === bookId);
-    console.log(bookId, Book);
   const {
     bookName,
     image,
@@ -53,9 +52,9 @@ const BookDetails = () => {
           </p>
           <div className="flex gap-3 items-center pb-6">
             <h3>Tags: </h3>
-            {tags.map((tag) => {
+            {tags.map((tag, idx) => {
               return (
-                <p className="py-[7px] px-[16px] rounded-4xl text-[#23BE0A] bg-[#23BE0A0D]">
+                <p key={idx} className="py-[7px] px-[16px] rounded-4xl text-[#23BE0A] bg-[#23BE0A0D]">
                   {tag}
                 </p>
               );
